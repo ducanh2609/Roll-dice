@@ -1,0 +1,80 @@
+.dice-box {
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+  margin: 150px auto 80px;
+}
+
+.dice {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background-color: rgb(113, 91, 220);
+  border-radius: 20%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 35px;
+  box-sizing: border-box;
+}
+.dice > div {
+  /* border: 1px solid red; */
+  height: 37px;
+  position: relative;
+}
+
+.result {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  /* border: 1px solid red; */
+  left: 2px;
+  top: 3px;
+}
+
+.btn-sherk {
+  position: relative;
+  left: 44%;
+  height: 80px;
+  width: 200px;
+  background-color: rgb(113, 91, 220);
+  border-radius: 20px;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  border: none;
+}
+
+.btn-sherk:hover {
+  cursor: pointer;
+}
+
+.shaking {
+  animation-name: wobble;
+  animation-duration: 1.5s;
+}
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
